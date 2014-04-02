@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.maxtower.testqr.MainActivity"
+    tools:ignore="MergeRootFrame" >
+    
+    
+    <TextView
+        android:id="@+id/tvHello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter text below to encode" />
+    
+    <Button
+        android:id="@+id/btEncode"
+        android:layout_below="@id/tvHello"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Encode QR"
+        android:onClick="onClickEncode"
+        />
+    <EditText
+        android:id="@+id/etEncode"
+        android:layout_toRightOf="@id/btEncode"
+        android:layout_alignTop="@id/btEncode"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter Text"
+        />
+    <ImageView 
+        android:id="@+id/ivQRCode"
+        android:layout_below="@id/btEncode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btDecode"
+        android:layout_below="@id/ivQRCode"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Decode QR"
+        android:onClick="onClickDecode"
+        />
+    <TextView
+        android:id="@+id/tvDecode"
+        android:layout_below="@id/btDecode"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        />
+    
+    
+    </RelativeLayout>
